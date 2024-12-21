@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+:root {
+  --primary-bg: #0f172a;
+  --secondary-bg: #f1f5f9;
+  --cell-bg: #e2e8f0;
+  --button-hover: #020617;
+  --cell-hover: #cbd5e1;
+}
+
+body,
+button,
+input {
+  font-family: Orbitron;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+dialog {
+  border: none;
+  border-radius: 16px;
+  padding: 16px;
+  width: 30vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input {
+  border: 1px solid var(--primary-bg);
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 8px;
+}
+
+.header {
+  background-color: var(--primary-bg);
+  color: white;
+  font-size: 64px;
+  font-style: italic;
+  font-weight: 700;
+  padding: 24px 0;
+  text-align: center;
+}
+
+.container {
+  background-color: var(--secondary-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.turn {
+  font-size: 48px;
+  text-align: center;
+}
+
+.board {
+  height: 48vh;
+  width: 48vh;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 4px;
+}
+
+.cell-button {
+  background-color: var(--cell-bg);
+  font-size: 10vh;
+}
+
+.cell-button:hover {
+  background-color: var(--cell-hover);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-over .cell-button:hover {
+  background-color: var(--cell-bg);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.game-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.clear-button,
+.reset-button,
+.start-button {
+  background-color: var(--primary-bg);
+  border-radius: 21px;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 12px 24px;
+}
+
+.clear-button:hover,
+.reset-button:hover,
+.start-button:hover {
+  background-color: var(--button-hover);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-header,
+.end-message {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.end-message {
+  margin-bottom: 16px;
+  text-align: center;
+}
