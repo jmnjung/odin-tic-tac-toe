@@ -91,7 +91,7 @@ const gameController = (function () {
 
   const playRound = (row, col) => {
     const moveSuccess = gameBoard.makeMove(row, col, currentPlayer.token);
-    if (!moveSuccess) return GameState.ONGOING;
+    if (!moveSuccess) return;
 
     const currentBoard = gameBoard.getBoard();
 
